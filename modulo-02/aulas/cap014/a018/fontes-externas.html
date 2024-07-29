@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Fontes Externas </title>
+
+    <style>
+        /* Fontes Online */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        /* Fontes Baixadas */
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype'), url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format(truetype);
+            /*
+                Tipos de format()
+                - opentype (otf)
+                - trueformat (ttf)
+                - embedded-opentype
+                - truetype-aat
+                - svg
+            */
+        }
+
+        body {
+            font: normal normal 1em Roboto, Arial, Helvetica, sans-serif;
+        }
+
+        .montserrat {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .strong-types-list strong {
+            color: #4649e0;
+        }
+    </style>
+</head>
+<body>
+    <h1> Fontes Externas </h1>
+    <h2> Google Fonts </h2>
+    <p> Para adicionar uma fonte do Google Fonts no seu site via CSS, basta copiar a regra CSS fornecida pelo próprio site e colar no início do seu documento CSS. Abaixo, a fonte Roboto, do Google Fonts. </p>
+    <h3> Exemplo de uso de 'Roboto', do Google Fonts </h3>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error nobis quidem quisquam eum laboriosam, maiores, ipsa aut doloribus a dolorem architecto incidunt? Adipisci praesentium nihil facere fugit vel nesciunt natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum architecto itaque fugit id, atque quaerat consequuntur alias iste, aliquid quisquam recusandae iusto, et consectetur molestiae dolor dicta eveniet non voluptas? </p>
+
+
+    <section class="montserrat">
+        <h2 class="bold"> Fontes Baixadas </h2>
+        <p> Para usar fontes baixadas que estão diretamente na pasta do seu projeto, usamos a regra <strong>@font-face</strong>, para especificar onde está o arquivo e como ele deve ser aplicado. A regra é composta de <strong>font-family</strong>, na qual você especifica o nome da família que você desejar; e <strong>src</strong>, que recebe dois tipos de parâmetros - <strong>url</strong>, no qual se insere o caminho do arquivo; e <strong>format</strong>, no qual se especifica o tipo do arquivo. Além disso, você pode limitar o uso das variações aplicando as propriedades <strong>font-weight</strong> e <strong>font-style</strong>. Aplicando <em>"font-weight: 100 900;"</em>, você diz que todas as opções de peso estão disponíveis para uso. Já o uso do "font-style: italic;", especifica a disponibilidade do itálico. </p>
+        <p class="strong-types-list"> O parâmetro format() recebe alguns valores pré-estabelecidos: <strong>opentype (para .otf)</strong>, <strong>trueformat (para .ttf)</strong>, <strong>woff (para .woff)</strong>, <strong>embedded-opentype (para .eot)</strong>, e <strong>svg (para .svg)</strong>.  </p>
+        <h3> Exemplo de uso de 'Montserrat' baixada </h3>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse modi explicabo odit quam non deleniti tenetur veniam ratione velit ducimus consectetur sunt debitis, voluptas distinctio eaque. Debitis tempore sed ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio accusantium tempore corrupti suscipit magnam. Quas ratione odit neque, magnam saepe beatae enim dolor libero laborum! Sequi nulla alias soluta ipsum. </p>
+    </section>
+</body>
+</html>

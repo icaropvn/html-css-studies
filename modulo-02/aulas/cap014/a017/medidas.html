@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Unidades de Medida </title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body {
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 234, 209);
+        }
+
+        h1 {
+            color: #8a4117;
+        }
+
+        h2 {
+            color: #2b2b2b;
+        }
+
+        .not-recommended {
+            color: #c02727;
+        }
+    </style>
+</head>
+<body>
+    <h1> Unidades de Medida em HTML </h1>
+    <h2> Unidades Absolutas </h2>
+    <ul>
+        <li> cm (centímetro)
+        <li> mm (milímetro)
+        <li> in (polegada)
+        <li> px (pixel)
+        <li> pt (ponto) - <strong class="not-recommended">recomendado apenas para impressão</strong>
+        <li> pc (paica)
+    </ul>
+    <h2> Unidades Relativas </h2>
+    <ul>
+        <li> <strong>em:</strong> relativo ao tamanho padrão do corpo da fonte.
+        <li> <strong>ex:</strong> relativo ao tamanho padrão da altura-x da fonte (altura das letras minúsculas).
+        <li> <strong>rem:</strong> relativo ao tamanho padrão personalizado do corpo da fonte (definido por você no seletor root do CSS).
+        <li> <strong>vw:</strong> relativo ao tamanho da largura (width) da viewport.
+        <li> <strong>vh:</strong> relativo ao tamanho da altura (height) da viewport.
+        <li> <strong>%:</strong> relativo ao elemento pai.
+    </ul>
+    <h2> Observações </h2>
+    <ul>
+        <li> a W3C recomenda o uso do <strong>px</strong> e do <strong>em</strong> para ajustar tamanhos de fontes.
+        <li> <strong>geralmente</strong> 1em = 16px, e 2em = 32px.
+        <li> opte sempre pelo uso do <strong>em</strong> como medida padrão, para garantir a compatibilidade com vários tamanhos de tela.
+    </ul>
+</body>
+</html>

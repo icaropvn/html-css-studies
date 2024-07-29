@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Seletores Class em CSS </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="principal"> Utilizando Classes (class) em CSS </h1>
+    <h2> O que são classes? </h2>
+    <p> As class em CSS são usadas para contornar uma limitação dos identificadores (ids): a atribuição de um mesmo estilo para vários elementos. </p>
+
+    <h2> Formas de atribuir classes </h2>
+    <p> Você pode usar as classes em CSS em duas formas sintáticas: </p>
+    <ul>
+        <li> Apenas colocando .{classe} 
+        <li> Atribuindo o nome do elemento antes: h2.{classe}
+    </ul>
+    <p> A diferença está no fato de, ao atribuir o nome do elemento, as classes só serão válidas para aquele tipo de elemento especificamente, enquanto a outra forma abrange qualquer elemento que tiver a classe selecionada. </p>
+
+    <h2> Hierarquia de Seletores CSS </h2>
+    <p> A hierarquia dos seletores CSS segue a seguinte ordem: genéricos -> class -> id. </p>
+    <p> Isso influencia no fato de estilos de class sobreporem estilos genéricos, e, por sua vez, ids sobreporem class. </p>
+
+    <h2> Observações </h2>
+    <ul>
+        <li> Elementos individuais podem receber MAIS DE UMA CLASSE ao mesmo tempo! Para isso, basta atribuir, dentro do atributo class, os nomes das classes das quais você deseja que aquele elemento tenha, separados por espaço, apenas. </li>
+        <li> Não dê nome para as suas classes com base nos estilos que ela vão receber. Priorize a <strong>FUNÇÃO</strong> que aquele elemento terá. </li>
+    </ul>
+
+    <a href="pages/example.html" id="example-link"> Confira a página de exemplo de uso de classes </a>
+</body>
+</html>
