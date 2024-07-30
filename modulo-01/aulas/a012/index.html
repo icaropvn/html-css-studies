@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trabalhando com Vídeos </title>
+</head>
+<body>
+    <h1> Trabalhando com Vídeos </h1>
+    <h2> Vídeos Hospedados Localmente </h2>
+    <p> Os vídeos abaixo estão hospedados no meu próprio servidor! (E com thumbnail!) </p>
+    <video width="560" poster="images/leaf.jpg" controls loop>
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.m4v" type="video/mp4">
+        <source src="media/video.webm" type="video/webm">
+        <source src="media/video.ogv" type="video/ogg">
+        <p> Infelizmente seu navegador não suporta reprodução de vídeos! :( </p>
+        <br>
+        <a href="media/video.mp4" download="video.mp4" type="video/mp4">Clique aqui para baixar o vídeo em MP4</a>
+    </video>
+    <p> <strong>Cuidado!</strong> Hospedagem local de vídeos consome MUITA banda de tráfego de dados! <strong>Evite</strong> usar este método em casos reais. </p>
+
+    <h2> Vídeos Hospedados em Servidores Externos </h2>
+    <h3> YouTube </h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rJqBwn08xCo?si=lA-jVcCTaHRESHy-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h3> Vimeo </h3>
+    <iframe src="https://player.vimeo.com/video/104509732?h=4e5f58fe19&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Centralização Vertical</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0;
+        }
+
+        #container {
+            position: relative;
+
+            background-color: #dddddd;
+            height: 500px;
+            padding: 10px;
+        }
+
+        #content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50% );
+
+            background-color: #2de0d1;
+            height: 200px;
+            width: 400px;
+        }
+
+        .target {
+            background-image: url('../images-pack/target001.png');
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <section id="container" class="target">
+        <article id="content" class="target">
+
+        </article>
+    </section>
+</body>
+</html>

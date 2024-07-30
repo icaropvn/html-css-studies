@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Posição de Imagens de Background</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body {
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+
+        div.image-block {
+            background-image: url('../images-pack/wallpaper002.jpg');
+            height: 170px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        div#block1 {
+            background-position: left top;
+        }
+
+        div#block2 {
+            background-position: center left;
+        }
+
+        div#block3 {
+            background-position: right bottom;
+        }
+
+        div#block4 {
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Posição de Imagens no Background</h1>
+    <p>Possíveis valores para <strong>background-position</strong>:</p>
+    <ul>
+        <li>top left</li>
+        <li>top center</li>
+        <li>top right</li>
+        <li>center left</li>
+        <li>center center</li>
+        <li>center right</li>
+        <li>bottom left</li>
+        <li>bottom center</li>
+        <li>bottom right</li>
+    </ul>
+
+    <div id="block1" class="image-block"></div>
+    <div id="block2" class="image-block"></div>
+    <div id="block3" class="image-block"></div>
+    <div id="block4" class="image-block"></div>
+</body>
+</html>
