@@ -1,0 +1,23 @@
+Este projeto se refere a um site fictício para postagem de prosas, poesias, poemas e histórias no geral. A ideia inicial do site é conter uma página principal, introduzindo o usuário ao site, uma página "Sobre Nós" para as especificações de uma equipe fictícia por trás do site, uma página "Explorar" com uma simulação de recomendação de autores, os quais cada um teria uma página de perfil e páginas dedicadas a cada obra postada pelo autor. Por fim, uma página de formulário para criação de conta.
+
+Home
+    - Banner com slide de imagens
+    - Introdução ao site
+
+Sobre Nós
+    - Breve biografia de uma equipe fictícia
+
+Explorar
+    - Simulação de recomendação de autores: "Clássicos" e "Autores em Destaque".
+
+Página para cada autor
+    - Informações pessoais (nome, idade)
+    - Obras publicadas
+    - Obras para acessar
+
+Página para cada obra
+    - Título como subcabeçalho
+    - Imagens de background e efeito de transparência
+
+Página de Registro
+    - Formulário para criação de conta
