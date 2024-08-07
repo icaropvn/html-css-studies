@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Script Malicioso</title>
+</head>
+<body>
+    <h1>Script nada suspeito</h1>
+     <a href="#" onclick="ganhou()">Clique aqui e ganhe muito dinheiro!</a>
+     <div id="saida"></div>
+
+     <script>
+        function ganhou() {
+            saida = window.document.getElementById('saida')
+            saida.innerHTML += '<p>você ganhou R$300,00!</p>'
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: #0f111d url('images/background.jpg') no-repeat;
+    background-size: cover;
+}
+
+main {
+    height: 100vh;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('images/frame-iphone.png');
+    width: 311px;
+    height: 627px;
+}
+
+iframe {
+    position: relative;
+    top: 79px;
+    left: 21px;
+    width: 270px;
+    height: 474px;
+}
+
+nav {
+    backdrop-filter: blur(4px);
+    position: absolute;
+    height: 65px;
+    bottom: 0;
+    left: 50%;
+    padding: 15px 15px 10px 15px;
+    border: 1px solid #ffffff17;
+    border-bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transform: translate(-50%, 0);
+}
+
+nav a {
+    display: inline-block;
+    position: relative;
+    background-color: #1e223a;
+    border: none;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.05s ease-out;
+}
+
+nav a:hover {
+    background-color: #ffaf63;
+    box-shadow: 0 0 10px 0 #ffaf63;
+    transform: translateY(-5px);
+}
+
+nav img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+}

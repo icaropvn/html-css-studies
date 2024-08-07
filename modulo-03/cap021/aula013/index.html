@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Colunas em Tabelas</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: 1.2em;
+        }
+
+        td, th {
+            border: 1px solid #000000;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        thead {
+            background-color: #dddddd;
+        }
+
+        #name, #occupation {
+            width: 150px;
+        }
+
+        #genre {
+            width: 120px;
+        }
+
+        .name-col {
+            background-color: #b2eb7c;
+        }
+
+        .genre-birthday-col {
+            background-color: #ff9696;
+        }  
+
+        .occupation-col {
+            background-color: #c2c2ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agrupando e Personalizando Colunas</h1>
+
+    <table>
+        <!-- Tag Nova: <colgroup> -->
+        <colgroup>
+            <col class="name-col">
+            <col class="genre-birthday-col" span="2">
+            <col class="occupation-col">
+        </colgroup>
+        
+        <caption>Registro de Cadastro</caption>
+        <thead>
+            <th id="name" scope="col">Nome</th>
+            <th id="genre" scope="col">Sexo</th>
+            <th scope="col">Data de Nascimento</th>
+            <th id="occupation" scope="col">Profissão</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td>Feminino</td>
+                <td>20/08/1999</td>
+                <td>Jornalista</td>
+            </tr>
+            <tr>
+                <td>Dom</td>
+                <td>Masculino</td>
+                <td>13/05/1997</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>Masculino</td>
+                <td>04/06/1982</td>
+                <td>Professor</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>Masculino</td>
+                <td>31/10/2005</td>
+                <td>Vendedor</td>
+            </tr>
+            <tr>
+                <td>Laura</td>
+                <td>Feminino</td>
+                <td>22/01/1985</td>
+                <td>Médica</td>
+            </tr>
+            <tr>
+                <td>Victor</td>
+                <td>Masculino</td>
+                <td>12/11/2002</td>
+                <td>Nutricionista</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

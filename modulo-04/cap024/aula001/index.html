@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 25px;
+        }
+
+        p {
+            text-indent: 30px;
+            text-align: justify;
+            line-height: 1.4em;
+        }
+
+        form {
+            width: fit-content;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 0 20px;
+            margin: 40px auto;
+        }
+
+        form p {
+            text-indent: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Formulários</h1>
+    <p>O básico de todo formulário é, primeiramente, estar envolvido nas tags <strong>&lt;form&gt;</strong> e <strong>&lt;/form&gt;</strong>.</p>
+    <p>Para começar, um dos elementos mais importantes é o <strong>&lt;input&gt;</strong>. Ele serve para coletar os dados do usuário através de uma caixa na qual pode ser digitada. Um input pode ser de <strong>inúmeros tipos</strong>, cada tipo tem seus estilos predefinidos para facilitar a coleta dos dados (text, password, email, datetime, submit, etc).</p>
+    <p>Abaixo estamos usando dois tipos de input: um <strong>input text</strong> para a coleta do nome e sobrenome do usuário, e um <strong>input submit</strong> para enviar os dados escritos no input text para algum fluxo de tratamento.</p>
+    <p>A partir de inputs do tipo <strong>submit</strong>, podemos enviar dados diretamente para arquivos de linguagens back-end, como <strong>PHP</strong>, que vão tratar os dados enviados.</p>
+
+    <form action="cadastro.php" autocomplete="off">
+        <p>
+            Nome:
+            <input type="text" name="nome" id="nome">
+        </p>
+        <p>
+            Sobrenome:
+            <input type="text" name="sobrenome" id="sobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+    <h2>Diferença entre "name" e "id"</h2>
+    <p>Ambos são identificadores, sua diferença está para que estão direcionados. Quando enviamos dados via um submit, geralmente mandamos esses dados para alguma <strong>linguagem de programação back-end</strong> para tratá-los. O "name" nesse caso, é útil justamente para isso, na linguagem <strong>PHP</strong>, por exemplo, a identificação dos dados é feita a partir de "names", o que facilita sua manipulação, enquanto a linguagem <strong>JavaScript</strong> trabalha melhor com os IDs.</p>
+
+    <h2>Utilizando Labels</h2>
+    <p><strong>Labels</strong> são tags usadas para envelopar os identificadores textuais dos inputs. No exemplo acima, "Nome" e "Sobrenome" deveriam estar dentro de labels. Sua principal utilidade é <strong>criar uma relação entre o texto e o input</strong>, melhorando o SEO de seu site. Além disso, ele cria uma relação na usabilidade do formulário, uma vez que, ao clicar sobre uma label, você seleciona o input relacionado a ela.</p>
+    <form action="cadastro.php" autocomplete="off">
+        <p>
+            <label for="id-nome">Nome:</label>
+            <input type="text" name="nome" id="id-nome">
+        </p>
+        <p>
+            <label for="id-sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="id-sobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+    <h2>Métodos de Envio de Formulários</h2>
+    <p>Quando clicamos num submit para enviar os dados para outro lugar, a HTML pode fazer essa transferência de <strong>2 maneiras</strong>. Essas maneiras são chamados de <strong>Métodos de Envio</strong>, e elas são: <strong>get</strong> e <strong>post</strong>. Get é o método menos seguro dos dois, uma vez que ele envia os dados explicitamente através da URL. Post, por sua vez, não envia diretamente pela URL, mas ainda assim deixa os dados acessíveis através da área <strong>"Header"</strong> do arquivo de destino, visível pelo DevTools do Chrome.</p>
+    <h3>Envio com GET</h3>
+    <p>< colocar imagem aqui ></p>
+    <h3>Envio com POST</h3>
+    <p>< colocar imagem aqui ></p>
+    <h3>Quando usar cada método?</h3>
+</body>
+</html>

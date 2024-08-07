@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alternando iframes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        h1 {
+            margin: 20px 0 20px 20px;
+        }
+
+        p {
+            margin: 20px;
+            text-align: justify;
+            text-indent: 40px;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 60px;
+        }
+
+        a {
+            display: inline-block;
+            color: #000000;
+            text-decoration: none;
+            padding: 5px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.1s ease-out;
+        }
+
+        a:hover {
+            background-color: #d3d3d3;
+        }
+
+        iframe {
+            display: block;
+            margin: 30px auto;
+            width: 70vw;
+            height: 400px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alternando iframes</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus voluptatum quas at exercitationem deserunt ratione harum, animi sequi, quaerat esse ex modi reiciendis accusamus perspiciatis! Officia earum maiores ex rem.
+    Dicta ad quos eaque saepe. Dignissimos aliquid, aspernatur temporibus quia sequi praesentium deleniti illum consequuntur fuga, numquam officiis eveniet assumenda? Veritatis, excepturi asperiores? Nam mollitia possimus iusto voluptatem rerum tempore!</p>
+
+    <ul>
+        <li>
+            <a href="pages/page01.html" target="iframe">Página 01</a>
+        </li>
+        <li>
+            <a href="pages/page02.html" target="iframe">Página 02</a>
+        </li>
+        <li>
+            <a href="pages/page03.html" target="iframe">Página 03</a>
+        </li>
+    </ul>
+
+    <iframe name="iframe" srcdoc="<h1 style='text-align: center;'>Escolha uma das páginas acima para aparecer aqui!</h1><img src='images/bee.png' style='display: block; margin: 0 auto;'>" frameborder="0">
+        <p>Seu navegador não suporta essa tecnologia :(</p>
+    </iframe>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae non nobis blanditiis architecto cum facere unde? Nesciunt ipsum fugiat consequuntur rerum quam doloribus voluptas eveniet? Nemo vero repudiandae impedit?
+    Voluptatem exercitationem optio voluptas a ea deleniti distinctio amet, doloribus aliquam doloremque suscipit porro aut autem excepturi fugit. Mollitia, delectus quia. Repellat ex vero, corporis officia eius aliquam reiciendis esse.
+    Tempore mollitia, harum magnam non sed in ut sunt sapiente voluptas omnis deserunt cupiditate commodi doloribus consectetur neque! Officiis minus, reprehenderit cupiditate et maiores exercitationem accusamus deserunt hic. Repellendus, fugiat.</p>
+</body>
+</html>

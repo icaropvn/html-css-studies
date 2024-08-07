@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iframes Seguros</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            display: block;
+            margin: 30px auto;
+            width: 40vw;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tornando iframes Seguros</h1>
+    <h2>iframes sem qualquer parâmetro de segurança</h2>
+
+    <iframe src="pages/form.html" frameborder="0">
+        <p>Infelizmente seu navegador não suporta essa tecnologia.</p>
+    </iframe>
+
+    <iframe src="pages/script.html" frameborder="0">
+        <p>Infelizmente seu navegador não suporta essa tecnologia.</p>
+    </iframe>
+
+    <h2>Usando sandbox="sandbox" e referrerpolicy=""no-referrer"</h2>
+
+    <iframe src="pages/form.html" frameborder="0" sandbox="sandbox" referrerpolicy="no-referrer">
+        <p>Infelizmente seu navegador não suporta essa tecnologia.</p>
+    </iframe>
+
+    <iframe src="pages/script.html" frameborder="0" sandbox="sandbox" referrerpolicy="no-referrer">
+        <p>Infelizmente seu navegador não suporta essa tecnologia.</p>
+    </iframe>
+</body>
+</html>
