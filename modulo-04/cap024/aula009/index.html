@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários VI</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 20px;
+        }
+
+        h2 {
+            text-indent: 20px;
+        }
+
+        h3 {
+            text-indent: 40px;
+        }
+
+        p {
+            text-indent: 40px;
+            line-height: 1.3em;
+        }
+
+        code {
+            background-color: #eeeeee;
+            color: #6060a5;
+            padding: 2px 10px;
+            font-size: 1.1em;
+            border-radius: 4px;
+        }
+
+        form {
+            width: fit-content;
+            margin: 30px auto;
+            padding: 5px 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        form div {
+            margin: 15px 0;
+        }
+
+        aside {
+            background-color: #ffe0e0;
+            padding: 4px 20px;
+            margin-top: 30px;
+            border: 1px solid #ff7171;
+            border-radius: 10px;
+        }
+
+        aside > p {
+            color: #e92424;
+        }
+
+        #no-border {
+            border: 0px;
+        }
+
+        fieldset {
+            padding: 0 40px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Formulários, Pt. VI</h1>
+    
+    <h2>Novos Inputs</h2>
+    <h3>Color</h3>
+    <p>Usado para selecionar uma cor entre todas possíveis.</p>
+    <h3>Range</h3>
+    <p>Usado para definir a quantidade ou nível de algo. O tamanho é personalizável, sendo de 0 a 100 o padrão.</p>
+    <h3>File</h3>
+    <p>Usado para selecionar arquivos e enviá-los. É importante reforçar que para usar esse tipo de input, é necessário usar o método <strong>post</strong> de envio.</p>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="color-id">Cor:</label>
+            <input type="color" name="color" id="color-id" value="#303030">
+        </div>
+        <div>
+            <label for="range-id">Nível de Algo:</label>
+            <input type="range" name="range" id="range-id" min="1" max="5" value="2">
+        </div>
+        <div>
+            <label for="file-id">Arquivo:</label>
+            <input type="file" name="file" id="file-id">
+        </div>
+        <div>
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários III</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 20px;
+        }
+
+        h2 {
+            text-indent: 20px;
+        }
+
+        h3 {
+            text-indent: 40px;
+        }
+
+        p {
+            text-indent: 40px;
+            line-height: 1.3em;
+        }
+
+        code {
+            background-color: #eeeeee;
+            color: #6060a5;
+            padding: 2px 10px;
+            font-size: 1.1em;
+            border-radius: 4px;
+        }
+
+        form {
+            width: fit-content;
+            margin: 30px auto;
+            padding: 5px 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        form > div {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Formulários, Pt. III</h1>
+
+    <h2>Novos Elementos</h2>
+    <h3>Input tipo <code>number</code></h3>
+    <p>Inputs tipo number aceitam somente números, inclusive colocam setinhas do lado do input para facilitar sua manipulação. Alguns atributos interessantes são: <code>min</code> e <code>max</code> para alterar os valores permitidos, e <code>step</code> para ajustar os intervalos aceitos.</p>
+    <h3>Input tipo <code>month</code></h3>
+    <p>Inputs desse tipo permitem a escolha de um mês e um ano, a partir de uma caixa formatada para tal. Ao enviar o formulário, tais informações são mandadas da seguinte maneira: ANO-MÊS (ex. 2024-08, 2020-03, 2022-02, etc).</p>
+    <h3>Input tipo <code>date</code></h3>
+    <p>Input usado para enviar datas específicas. O formato do envio é ANO-MÊS-DIA (ex. 2024-08-25).</p>
+    <h3>Input tipo <code>time</code></h3>
+    <p>Input usado para enviar horários, sendo possível definir a hora e os minutos. Formato de envio: HORA<strong>%3A</strong>MINUTOS, sendo o "%3A" o código para o hífen (ex. 19%3A00, 22%3A15).
+    </p>
+
+    <form action="cadastro.php">
+        <div>
+            <label for="name-id">Nome:</label>
+            <input type="text" name="name" id="name-id" placeholder="Nome Completo">
+        </div>
+        <div>
+            <label for="avarage-id">Média:</label>
+            <input type="number" name="avarage" id="avarage-id" min="0" max="10" step="0.25" placeholder="0 a 10">
+        </div>
+        <div>
+            <label for="academic-month-id">Período Letivo:</label>
+            <input type="month" name="academic-month" id="academic-month-id">
+        </div>
+        <div>
+            <label for="test-date-id">Data da Última Prova:</label>
+            <input type="date" name="test-date" id="test-date-id">
+        </div>
+        <div>
+            <label for="test-time-id">Horário da Última Prova:</label>
+            <input type="time" name="test-time" id="test-time-id">
+        </div>
+        <div>
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

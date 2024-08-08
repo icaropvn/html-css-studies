@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários IV</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 20px;
+        }
+
+        h2 {
+            text-indent: 20px;
+        }
+
+        h3 {
+            text-indent: 40px;
+        }
+
+        p {
+            text-indent: 40px;
+            line-height: 1.3em;
+        }
+
+        code {
+            background-color: #eeeeee;
+            color: #6060a5;
+            padding: 2px 10px;
+            font-size: 1.1em;
+            border-radius: 4px;
+        }
+
+        form {
+            width: fit-content;
+            margin: 30px auto;
+            padding: 5px 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        form div {
+            margin: 15px 0;
+        }
+
+        aside {
+            background-color: #e0eaff;
+            padding: 4px 20px;
+            margin-top: 30px;
+            border: 1px solid #71a3ff;
+            border-radius: 10px;
+        }
+
+        aside > p {
+            color: #1056d6;
+        }
+
+        #no-border {
+            border: 0px;
+        }
+
+        fieldset {
+            padding: 0 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Formulários, Pt. IV</h1>
+
+    <h2>Novos Elementos</h2>
+    <h3>Input tipo <code>email</code></h3>
+    <p>Inputs do tipo email não fazem validações tão complexas, apenas verificam a existência de um @ no input.</p>
+    <h3>Input tipo <code>tel</code></h3>
+    <p>Input usado para números de telefone.</p>
+
+    <aside>
+        <p>Um tópico muito interessante e útil a ser estudado é <strong>RegEx</strong> em HTML5 (expressões regulares). Essa tecnologia permite manipular dígito a dígito como será a forma do conteúdo do input. Por exemplo: (XX) XXXXX-XXXX para telefones, XX/XX/XXXX para datas, dentre muitos outros.</p>
+    </aside>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <div>
+            <label for="name-id">Nome:</label>
+            <input type="text" name="name" id="name-id">
+        </div>
+        <div>
+            <label for="email-id">Email:</label>
+            <input type="email" name="email" id="email-id" autocomplete="email">
+        </div>
+        <div>
+            <label for="phone-id">Telefone:</label>
+            <input type="tel" name="phone" id="phone-id" autocomplete="tel" pattern="^\(\d{2}\) \d{4,5}-\d{4}$" placeholder="(XX) XXXXX-XXXX">
+        </div>
+        <div>
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <h2>A Tag <code>fieldset</code></h2>
+    <p>A tag fieldset serve para agrupar inputs dentro de um mesmo formulário. Podemos usá-la em conjunto com a tag <code>legend</code> para identificar aquele conjunto de inputs.</p>
+
+    <form id="no-border" action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="name-id">Nome:</label>
+                <input type="text" name="name" id="name-id">
+            </div>
+            <div>
+                <label for="email-id">Email:</label>
+                <input type="email" name="email" id="email-id" autocomplete="email">
+            </div>
+            <div>
+                <label for="phone-id">Telefone:</label>
+                <input type="tel" name="phone" id="phone-id" autocomplete="tel" pattern="^\(\d{2}\) \d{4,5}-\d{4}$" placeholder="(XX) XXXXX-XXXX">
+            </div>
+            <div>
+                <input type="submit">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

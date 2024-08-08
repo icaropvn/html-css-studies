@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários V</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 20px;
+        }
+
+        h2 {
+            text-indent: 20px;
+        }
+
+        h3 {
+            text-indent: 40px;
+        }
+
+        p {
+            text-indent: 40px;
+            line-height: 1.3em;
+        }
+
+        code {
+            background-color: #eeeeee;
+            color: #6060a5;
+            padding: 2px 10px;
+            font-size: 1.1em;
+            border-radius: 4px;
+        }
+
+        form {
+            width: fit-content;
+            margin: 30px auto;
+            padding: 5px 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        form div {
+            margin: 15px 0;
+        }
+
+        aside {
+            background-color: #ffe0e0;
+            padding: 4px 20px;
+            margin-top: 30px;
+            border: 1px solid #ff7171;
+            border-radius: 10px;
+        }
+
+        aside > p {
+            color: #e92424;
+        }
+
+        #no-border {
+            border: 0px;
+        }
+
+        fieldset {
+            padding: 0 40px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Formulários, Pt. V</h1>
+
+    <h2>Inputs Marcadores</h2>
+    <h3>Checkbox</h3>
+    <p>Checkbox são caixinhas de marcação inclusivas, ou seja, ao mandar o formulário, várias caixinhas podem ser marcadas ao mesmo tempo e enviadas junto.</p>
+    <h3>Radio</h3>
+    <p>Radio é um tipo de marcação exclusivo. Ou você marca um, ou outro. Somente um dos dados escolhido será enviado. Um adendo importante é: ao enviar um radio, você deve colocar o valor que efetivamente será enviado no atributo <code>value</code> do radio. Caso contrário, ele apenas o estado do radio (marcado ou desmarcado).</p>
+
+    <aside>
+        <p><strong>CUIDADO!</strong> Ao usar radios, estar em um mesmo fieldset não é suficiente para fazê-los funcionar corretamente. Para corrigir esse problema, é necessário que todos os radios do grupo tenham o <strong>mesmo nome</strong>.</p>
+    </aside>
+    
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <div>
+                <input type="checkbox" name="basketball" id="basketball-id">
+                <label for="basketball-id">Basquete</label>
+                <br>
+                <input type="checkbox" name="soccer" id="soccer-id">
+                <label for="soccer-id">Futebol</label>
+                <br>
+                <input type="checkbox" name="swimming" id="swimming-id">
+                <label for="swimming-id">Natação</label>
+                <br>
+                <input type="checkbox" name="tennis" id="tennis-id">
+                <label for="tennis-id">Tênis</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <div>
+                <input type="radio" name="sex" id="male" value="M">
+                <label for="male">Masculino</label>
+                <br>
+                <input type="radio" name="sex" id="female" value="F">
+                <label for="female">Feminino</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

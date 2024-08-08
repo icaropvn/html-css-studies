@@ -32,6 +32,32 @@
         form p {
             text-indent: 0;
         }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-position: inside;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        aside {
+            background-color: #ffe0e0;
+            padding: 4px 20px;
+            margin-top: 30px;
+            border: 1px solid #ff7171;
+            border-radius: 10px;
+        }
+
+        aside > p {
+            color: #e92424;
+        }
     </style>
 </head>
 <body>
@@ -56,11 +82,11 @@
     </form>
 
     <h2>Diferença entre "name" e "id"</h2>
-    <p>Ambos são identificadores, sua diferença está para que estão direcionados. Quando enviamos dados via um submit, geralmente mandamos esses dados para alguma <strong>linguagem de programação back-end</strong> para tratá-los. O "name" nesse caso, é útil justamente para isso, na linguagem <strong>PHP</strong>, por exemplo, a identificação dos dados é feita a partir de "names", o que facilita sua manipulação, enquanto a linguagem <strong>JavaScript</strong> trabalha melhor com os IDs.</p>
+    <p>Ambos são identificadores, sua diferença está para que estão direcionados. Quando enviamos dados via um submit, geralmente mandamos esses dados para alguma <strong>linguagem de programação back-end</strong> para tratá-los. O "name" nesse caso, é útil justamente para isso, na linguagem <strong>PHP</strong>, por exemplo, a identificação dos dados é feita a partir de "names", o que facilita sua manipulação, enquanto a linguagem <strong>JavaScript</strong> trabalha melhor com os IDs. Além disso, IDs são usados para linkar inputs e suas respectivas labels.</p>
 
     <h2>Utilizando Labels</h2>
     <p><strong>Labels</strong> são tags usadas para envelopar os identificadores textuais dos inputs. No exemplo acima, "Nome" e "Sobrenome" deveriam estar dentro de labels. Sua principal utilidade é <strong>criar uma relação entre o texto e o input</strong>, melhorando o SEO de seu site. Além disso, ele cria uma relação na usabilidade do formulário, uma vez que, ao clicar sobre uma label, você seleciona o input relacionado a ela.</p>
-    <form action="cadastro.php" autocomplete="off">
+    <form action="cadastro.php" method="post" autocomplete="off">
         <p>
             <label for="id-nome">Nome:</label>
             <input type="text" name="nome" id="id-nome">
@@ -75,11 +101,28 @@
     </form>
 
     <h2>Métodos de Envio de Formulários</h2>
-    <p>Quando clicamos num submit para enviar os dados para outro lugar, a HTML pode fazer essa transferência de <strong>2 maneiras</strong>. Essas maneiras são chamados de <strong>Métodos de Envio</strong>, e elas são: <strong>get</strong> e <strong>post</strong>. Get é o método menos seguro dos dois, uma vez que ele envia os dados explicitamente através da URL. Post, por sua vez, não envia diretamente pela URL, mas ainda assim deixa os dados acessíveis através da área <strong>"Header"</strong> do arquivo de destino, visível pelo DevTools do Chrome.</p>
+    <p>Quando clicamos num submit para enviar os dados para outro lugar, a HTML pode fazer essa transferência de <strong>2 maneiras</strong>. Essas maneiras são chamados de <strong>Métodos de Envio</strong>, e elas são: <strong>get</strong> e <strong>post</strong>. Get é o método menos seguro dos dois, uma vez que ele envia os dados explicitamente através da URL. Post, por sua vez, não envia diretamente pela URL, mas ainda assim deixa os dados acessíveis através da área <strong>"Payload"</strong> do arquivo de destino, visível pelo DevTools do Chrome.</p>
     <h3>Envio com GET</h3>
-    <p>< colocar imagem aqui ></p>
+    <img src="images/envio-get.png" alt="Exemplo de envio do formulário com método GET">
     <h3>Envio com POST</h3>
-    <p>< colocar imagem aqui ></p>
+    <img src="images/envio-post.png" alt="Exemplo de envio do formulário com método POST">
     <h3>Quando usar cada método?</h3>
+    <p>Para decidir qual método usar, podemos nos basear em alguns fatores: usamos o <strong>GET</strong> majoritariamente quando:</p>
+    <ul>
+        <li>Dados passados <strong>não são sensíveis</strong>;</li>
+        <li>Seus dados <strong>não ultrapassarem de 3 mil bytes</strong> (aproximadamente 3 mil letras);</li>
+        <li>Seus dados forem <strong>apenas textuais</strong> e não mídias como fotos/vídeos;</li>
+        <li>Você desejar ter uma <strong>URL com dados compartilhável</strong>.</li>
+    </ul>
+    <p>Já em relação ao método <strong>POST</strong>, usamos quando estamos tratando de:</p>
+    <ul>
+        <li>Dados <strong>sensíveis</strong>;</li>
+        <li>Dados <strong>maiores que 3 mil bytes</strong>;</li>
+        <li>Dados <strong>não textuais</strong>;</li>
+        <li>URLs <strong>não compartilháveis</strong>.</li>
+    </ul>
+    <aside>
+        <p>Vale lembrar que o uso do método POST para dados sensíveis como <strong>senhas</strong> ou <strong>dados de cartão de crédito</strong> não é o mais ideal. Em vez disso, devemos usar o protocolo <strong>HTTPS</strong> para trafegar com esse tipo de informação.</p>
+    </aside>
 </body>
 </html>
