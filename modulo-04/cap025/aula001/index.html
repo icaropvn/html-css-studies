@@ -24,6 +24,27 @@
             border-radius: 10px;
         }
 
+        aside.reminder {
+            display: block;
+            margin: 0 auto;
+            max-width: 400px;
+            background-color: #caddff;
+            color: #063da1;
+            border: 1px solid #063da1;
+            border-radius: 10px;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            list-style-position: inside;
+        }
+
+        li {
+            margin: 30px 0;
+        }
+
         a {
             background-color: #e7e7e7;
             color: #054aca;
@@ -44,15 +65,28 @@
     <h2>O que são Media Queries?</h2>
     <p>Usamos essa tecnologia provida pelas CSS para tornar nossos sites responsivos e adaptáveis para diversos tamanhos de telas. Uma Media Querie cria versões diferentes do estilo de um site dedicadas para específicos tamanhos de tela (celulares, TVs, impressão, dentre outros).</p>
 
-    <h2>Começando em Media Queries: media types</h2>
+    <h2>Começando em Media Queries: Media Types</h2>
     <p>Um dos jeitos mais simplórios de usar Media Queries é através da identificação de um arquivo CSS. Ao realizar um link em um HTML para um arquivo CSS, podemos adicionar um atributo <strong>"media"</strong>, que especifica para o navegador, a qual tipo de mídia (media type) aquele estilo está direcionado.</p>
     <p>Por exemplo, se quisermos criar duas folhas de estilos, uma para a tela, e outra para a impressão do site, podemos criar as seguintes linhas de link de CSS:</p>
 
-    <img src="images/starting-media-queries.png" alt="Linhas de Código Exemplificando o uso de Media Queries através do atributo media em links de CSS.">
+    <img src="images/media-types.png" alt="Linhas de Código Exemplificando o uso de Media Queries através do atributo media em links de CSS.">
 
     <p>No entanto, existe uma grande limitação ao utilizar essa abordagem. Ao utilizar o <strong>media type</strong> "screen", não conseguimos identificar qual tipo de tela estamos trabalhando, sendo impossível adaptar nosso site para vários tipos de tela diferentes (celulares, tablets e TVs, por exemplo). Para resolver esse problema, dentro da media type screen, podemos utilizar <strong>Media Features</strong>, para especificar o tamanho da tela.</p>
 
+    <aside class="reminder">Media Query = Media Type + Media Feature</aside>
+
+    <h2>Simplificando Media Types: o tipo All</h2>
+    <p>Para que não precisemos ficar repetindo estilos iguais em diferentes arquivos CSS, podemos utilizar o media type <strong>all</strong>. Esse parâmetro abrange todos os tipos de mídia, e deve ser usado para aplicar estilos que serão comuns a todos eles, evitando cópia de código e dedicando os outros arquivos para somente estilos que se diferem entre as várias mídias.</p>
+
+    <h2>As Media Features</h2>
+    <p><strong>Media Features</strong> são configurações adicionais usadas também dentro do link das CSS. Elas geralmente são usadas para dedicar estilos a tamanhos e orientações de telas. Media Features são colocadas entre parênteses e isoladamente.</p>
+
+    <img src="images/media-features.png" alt="Exemplo de uso de Media Features">
+
     <h2>Aplicações/Exercícios</h2>
-    <a href="../aula002/aula002.html">Aula 02: Site para Impressão</a>
+    <ul>
+        <li><a href="../aula002/aula002.html">Aula 02: Site para Impressão</a></li>
+        <li><a href="../aula003/aula003.html">Aula 03: Orientação do Dispositivo</a></li>
+    </ul>
 </body>
 </html>
