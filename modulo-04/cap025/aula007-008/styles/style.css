@@ -28,7 +28,13 @@ main {
     text-align: center;
 }
 
-h1, p {
+main::after {
+    content: 'Você está visualizando a versão do nosso site para celulares!';
+    display: block;
+    margin-top: 20px;
+}
+
+h1, p, main::after {
     color: #eeeeee;
     text-shadow: 0 0 5px #00000083;
 }

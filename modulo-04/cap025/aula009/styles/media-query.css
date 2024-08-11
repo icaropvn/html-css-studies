@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* All medias styles, except smartphones */
+
+@media screen and (min-width: 600px) {
+    header h1 {
+        font-size: 2.3em;
+    }
+    
+    menu {
+        background-color: #9c9c9c;
+        padding: 20px 10px;
+    }
+
+    header li {
+        display: inline-block;
+    }
+
+    header a {
+        background-color: #eeeeee;
+        color: #000000;
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.1s ease-out;
+    }
+
+    header a:hover {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    span#menu-icon {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    main {
+        width: 90vw;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main p {
+        font-size: 1.2em;
+    }
+}
