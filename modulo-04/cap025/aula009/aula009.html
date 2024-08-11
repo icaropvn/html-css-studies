@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media-query.css">
 </head>
-<body>
+<body onresize="changedSize()">
     <header>
         <h1>Site Exemplo com Menu Responsivo</h1>
         <span id="menu-icon" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
@@ -36,6 +36,13 @@
     </main>
 
     <script>
+        function changedSize() {
+            if(window.innerWidth >= 600)
+                menu.style.display = 'block'
+            else
+                menu.style.display = 'none'
+        }
+
         function clickMenu() {
             if(menu.style.display == 'block')
                 menu.style.display = 'none'
