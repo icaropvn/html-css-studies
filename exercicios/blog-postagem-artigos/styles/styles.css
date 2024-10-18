@@ -19,15 +19,22 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Red Hat Display';
+
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     display: flex;
     position: relative;
     background-color: var(--color1);
-    height: 70px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
@@ -80,6 +87,8 @@ main {
     padding: 40px 30px;
     box-shadow: 0 0 40px 0 #0000002f;
     z-index: 0;
+
+    flex: 1;
 }
 
 main h1 {
@@ -107,4 +116,45 @@ main h1 {
     font-weight: 700;
     padding: 6px 10px;
     border-radius: 5px;
+}
+
+article a {
+    background-color: var(--color3);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.1s ease-out;
+}
+
+article a:hover {
+    background-color: var(--color6);
+}
+
+article a:active {
+    color: #000000;
+}
+
+article a:visited h2 {
+    color: #F55C7A;
+}
+
+footer {
+    background-color: var(--color1);
+    height: 200px;
+    padding: 30px 0;
+}
+
+#logo-footer {
+    width: fit-content;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+footer p {
+    width: fit-content;
+    color: #FFFFFF;
+    margin: 10px auto 0 auto;
 }
