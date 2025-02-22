@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* DM Sans font import */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff7e8;
+    font-family: 'DM Sans';
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 50px 0 50px 0;
+    color: #272727;
+}
+
+p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 60px 0 60px;
+    padding: 20px 20px;
+    background-color: #fcd58d;
+    color: #4b4b4b;
+    border-radius: 10px;
+}
+
+#links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 20px;
+    height: fit-content;
+    margin: 10vh 0 10vh 0;
+}
+
+#links-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2e2e2;
+    color: #000000;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    box-shadow: 0 0 0 0 #000000;
+    transition: transform 0.2s cubic-bezier(.32,0,.14,.99),
+                box-shadow 0.2s cubic-bezier(.32,0,.14,.99),
+                background-color 0.2s cubic-bezier(.32,0,.14,.99);
+}
+
+#links-container a:hover {
+    transform: translate(10px, -5px);
+    box-shadow: -10px 10px 0 0 #000000;
+}
+
+#links-container a:active {
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 0 #000000;
+}
+
+#social-media-form:hover {
+    background-color: #ffd670;
+}
+
+#company-contact-form:hover {
+    background-color: #c5d470;
+}
+
+#event-booking-form:hover {
+    background-color: #ffa17f;
+}
+
+#product-rating-form:hover {
+    background-color: #87ddff;
+}
+
+#satisfaction-survey-form:hover {
+    background-color: #ff93bc;
+}

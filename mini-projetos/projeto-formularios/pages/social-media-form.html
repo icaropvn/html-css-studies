@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulário - Rede Social</title>
+
+    <link rel="stylesheet" href="../styles/social-media.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Connektn</h1>
+        </header>
+        <section>
+            <h2>Cadastre-se</h2>
+            <form action="#">
+                <div class="inputDiv">
+                    <label for="nome">Nome completo *</label>
+                    <input id="nome" type="text" required>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="email">E-mail *</label>
+                    <input id="email" type="email" required>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="dataNascimento">Data de nascimento *</label>
+                    <input id="dataNascimento" type="date" required>
+                </div>
+
+                <p>Gênero *</p>
+                <div id="radioInputDiv">
+                    <div>
+                        <input id="generoMasc" type="radio" name="genero" value="masculino" required>
+                        <label for="generoMasc">Masculino</label>
+                    </div>
+
+                    <div>
+                        <input id="generoFem" type="radio" name="genero" value="feminino">
+                        <label for="generoFem">Feminino</label>
+                    </div>
+
+                    <div>
+                        <input id="generoOutro" type="radio" name="genero" value="outro">
+                        <label for="generoOutro">Outro</label>
+                    </div>
+
+                    <div>
+                        <input id="generoPrefNao" type="radio" name="genero" value="prefiroNaoInformar">
+                        <label for="generoPrefNao">Prefiro não informar</label>
+                    </div>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="senha">Senha *</label>
+                    <input id="senha" type="password" required>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="confirmarSenha">Confirmar senha *</label>
+                    <input id="confirmarSenha" type="password" required>
+                </div>
+
+                <input id="submitButton" type="submit" value="Cadastrar">
+            </form>
+        </section>
+    </main>
+
+    <script src="../scripts/social-media.js"></script>
+</body>
+</html>
