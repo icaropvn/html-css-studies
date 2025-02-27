@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* Figtree font import */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Figtree, Arial, sans-serif;
+    background: linear-gradient(#0000004d, #0000004d), url('images/bakground-image.jpg') no-repeat fixed center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer {
+    background-color: #ffffff0c;
+    backdrop-filter: blur(10px);
+    width: 45vw;
+    max-width: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border: 1px solid #ffffff10;
+    border-radius: 15px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+#profilePic {
+    width: 170px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+#buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#buttonsContainer a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: transform 0.1s ease-in-out,
+                background-color 0.1s ease-out,
+                color 0.1s ease-out;
+}
+
+#buttonsContainer a:hover {
+    background-color: #2eb982;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+#socialMediaContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#socialMediaContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.1s ease-out;
+}
+
+#socialMediaContainer a:hover {
+    background-color: #000000;
+}
+
+#socialMediaContainer a:hover svg {
+    fill: #ffffff;
+    animation: jump-shaking 0.5s ease-in-out;
+}
+
+#socialMediaContainer svg {
+    width: 35px;
+    height: 35px;
+    transition: fill 0.1s ease-out;
+}
+
+@keyframes jump-shaking {
+    0% { transform: rotate(0) }
+    35% { transform: rotate(17deg) }
+    55% { transform: rotate(-17deg) }
+    65% { transform: rotate(17deg) }
+    75% { transform: rotate(-17deg) }
+    100% { transform: rotate(0) }
+}
